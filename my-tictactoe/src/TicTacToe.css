@@ -1,0 +1,119 @@
+/* TicTacToe.css */
+
+/* Center the game on the screen */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.game-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Status Bar */
+.status-bar {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #555;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.status-win {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* The Grid Board */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+/* Individual Squares */
+.square {
+  background: #fff;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  float: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+  height: 80px;
+  width: 80px; /* Fixed width for stability */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  color: #333;
+}
+
+.square:hover {
+  background-color: #f8f9fa;
+}
+
+.square:active {
+  transform: scale(0.98);
+}
+
+/* Player Colors */
+.x-player {
+  color: #2c7be5; /* Blue for X */
+}
+
+.o-player {
+  color: #e63757; /* Red for O */
+}
+
+/* Winning Square Highlight */
+.winning-square {
+  background-color: #fff3cd !important;
+  border-color: #ffecb5;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Reset Button */
+.reset-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #555;
+}
